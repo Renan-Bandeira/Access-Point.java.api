@@ -3,7 +3,6 @@ package com.github.RenanBandeira.pontodeacesso.model;
 import lombok.*;
 
 import javax.persistence.Embeddable;
-import javax.persistence.Embedded;
 import javax.persistence.EmbeddedId;
 import javax.persistence.ManyToOne;
 import java.io.Serializable;
