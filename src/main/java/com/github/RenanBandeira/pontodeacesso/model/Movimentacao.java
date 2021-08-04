@@ -2,9 +2,7 @@ package com.github.RenanBandeira.pontodeacesso.model;
 
 import lombok.*;
 
-import javax.persistence.Embeddable;
-import javax.persistence.EmbeddedId;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -15,7 +13,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @EqualsAndHashCode
 @Builder
-
+@Entity
 public class Movimentacao {
 
     @NoArgsConstructor
@@ -26,7 +24,7 @@ public class Movimentacao {
         private long idMovimento;
         private long idUsuario;
     }
-
+    @Id
     @EmbeddedId
     private MovimentacaoId id;
     private LocalDateTime dataEntrada;

@@ -2,6 +2,8 @@ package com.github.RenanBandeira.pontodeacesso.model;
 
 import lombok.*;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 @Getter
@@ -10,8 +12,9 @@ import javax.persistence.ManyToOne;
 @AllArgsConstructor
 @EqualsAndHashCode
 @Builder
-
+@Entity
 public class Localidade {
+    @Id
     private long id;
     @ManyToOne
     private NivelAcesso nivelAcesso;
