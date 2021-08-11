@@ -3,6 +3,7 @@ package com.github.RenanBandeira.pontodeacesso.controller;
 import com.github.RenanBandeira.pontodeacesso.model.JornadaTrabalho;
 import com.github.RenanBandeira.pontodeacesso.service.JornadaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,8 +27,8 @@ public class JornadaTrabalhoController {
 
 
     @GetMapping("/{idjornada}")
-    public JornadaTrabalho getJornadaById(@PathVariable("idjornada") Long idjornada) throws Exception {
-        return jornadaService.getById(idjornada).orElseThrow(()-> new Exception("jornada não encontrada"));
+    public ResponseEntity<JornadaTrabalho> getJornadaById(@PathVariable("idjornada") Long idjornada) throws Exception {
+        return ResponseEntity.ok(jornadaService.getById(idjornada).orElseThrow(()-> new Exception("jornada não encontrada")));
 
     }
 }
