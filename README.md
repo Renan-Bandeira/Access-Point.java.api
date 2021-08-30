@@ -1,4 +1,6 @@
-## Desenvolvendo um sistema de controle de jornada de trabalho em API REST com Spring Boot - Java Developer DIO
+## Santander Bootcamp | Fullstack Developer
+
+Desenvolvendo um sistema de controle de acesso em API REST com Spring Boot
 
 
 
@@ -14,6 +16,8 @@
 **Framework e dependências:**
 
 - Lombok
+
+- Springfox Swagger 2
 
 - Spring Boot DevTools
 
